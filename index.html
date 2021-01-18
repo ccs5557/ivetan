@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Game & Digital Marketplace</title>
+		<style type="text/css">
+			* {
+				margin: 0px;
+				padding: 0px;
+			}
+			body {
+				background-color: #ffffff;
+			}
+			.top {
+				position: relative;
+				width: 100%;
+				height: 75px;
+				margin: 0 auto;
+				background-color: #ffffff;
+				box-shadow: 0 2px 20px 0 rgba(0,0,0,0.08);
+			}
+			.logo {
+				float: left;
+				height: 75px;
+				position: relative;
+				left: 20%;
+			}
+			.search {
+				float: left;
+				position: relative;
+				left: 25%;
+				top: 20%;
+				padding: 0px 200px 0 0px;
+				border: solid 1px #afafaf;
+				border-radius: 16px;
+			}
+			.search-input {
+				border: none;
+				background: none;
+				outline: none;
+				height: 40px;
+				width: 80%;
+				/* border: solid 1px #AFAFAF; */
+				margin-left: 10px;
+				padding-right: 100px;
+			}
+			.search:hover {
+				border: solid 1px #6593ff;
+			}
+			.searh-icon {
+				background-image: url(img/ss1.png);
+				width: 18px;
+				height: 18px;
+				position: absolute;
+				top: 12px;
+				right: 13px;
+			}
+			.login-icon {
+				float: left;
+				border-radius: 50%;
+				position: absolute;
+				width: 40px;
+				height: 40px;
+				top: 0%;
+				left: 130%;
+			}
+			.cart {
+				float: left;
+				position: absolute;
+				width: 40px;
+				height: 40px;
+				top: 0%;
+				left: 150%;
+			}
+			.tittle {
+				float: left;
+				width: 100%;
+				background-color: #FFFFFF;
+				box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+			}
+			li {
+				float: left;
+				list-style-type: none;
+				line-height: 60px;
+				padding-left: 90px;
+				position: relative;
+				left: 20%;
+			}
+			li a {
+				text-decoration: none;
+				color: #000000;
+				font-weight: 530;
+			}
+			li a:hover {
+				color: #55aaff;
+			}
+			.content {
+				margin-top: 110px;
+				width: 80%;
+			}
+			.game {
+				border-radius: 16px;
+				padding-right: 30px;
+			}
+			.game img {
+				transition: all 0.3s;
+				border-radius:16px;
+				margin: 6px;
+				width: 13%;
+				height: 13%;
+			}
+			.game img:hover{
+				transform: scale(1.05);
+			}
+			.newgameword {
+				font-size: 18px;
+				color: #6d6d6d;
+				position: relative;
+				left: -42%;
+			}
+			.game2 img {
+				transition: all 0.3s;
+				border-radius:16px;
+				margin: 10px;
+				width: 14%;
+				height: 15%;
+			}
+			.game2 img:hover{
+				transform: scale(1.05);
+			}
+			/* 分割线-分割线-分割线-分割线-分割线-分割线-分割线-分割线-分割线-分割线-分割线 */
+			/* -分割线-分割线-分割线-分割线-分割线-分割线-分割线-分割线-分割线-分割线-分割线 */
+			
+			.game3-tittle {
+				font-size: 18px;
+				color: #6d6d6d;
+				position: relative;
+				left: -42%;
+			}
+			.game3 {
+				/* border: solid 1px #000000; */
+				width: 100%;
+				height: 1500px;
+				margin: 40px 0 10px 0;
+			}
+			.game3-1 {
+				position: relative;
+				width: 95%;
+				height: 150px;
+				border: solid 1px #e7e7e7;
+				border-radius: 12px;
+			}
+			.game3-img1 {
+				position: absolute;
+				left: 0%;
+				width: 25%;
+				height: 100%;
+				border-radius: 12px 0 0px 12px;
+			}
+			.game3-word1 {
+				position: absolute;
+				top: 45%;
+				left: 30%;
+				font-size: 20px;
+			}
+			.game3-icon1 {
+				position: absolute;
+				background-image: url(img/icon1.png);
+				width: 9%;
+				height: 30%;
+				top: 35%;
+				right: 25%;
+			}
+			.game3-1 button {
+				position: absolute;
+				right: 5%;
+				top: 35%;
+				background-color: #ffffff;
+				color: #55aaff;
+				border: 2px solid #55aaff;
+				border-radius: 6px;
+				outline: none;
+				padding: 14px 50px;
+				text-align: center;
+				font-size: 16px;
+				font-weight: 700;
+				cursor: pointer;
+			}
+			.game3-1 button:hover {
+				background-color: #55aaff;
+				color: #ffffff;
+				box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+			}
+			.game3-1 button:active {
+				transform: translateY(4px);
+			}
+			.game3-1:hover {
+				border: none;
+				background-color: #ffffff;
+				color: #565656;
+				box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+			}
+			/* 分割线-分割线-分割线-分割线-分割线-分割线-分割线-分割线-分割线-分割线-分割线 */
+			/* -分割线-分割线-分割线-分割线-分割线-分割线-分割线-分割线-分割线-分割线-分割线 */
+			.game3-2 {
+				position: relative;
+				width: 95%;
+				height: 150px;
+				border: solid 1px #e7e7e7;
+				border-radius: 12px;
+				margin-top: 3%;
+			}
+			.game3-img2 {
+				position: absolute;
+				left: 0%;
+				width: 25%;
+				height: 100%;
+				border-radius: 12px 0 0px 12px;
+			}
+			.game3-word2 {
+				position: absolute;
+				top: 45%;
+				left: 30%;
+				font-size: 20px;
+			}
+			.game3-icon2 {
+				position: absolute;
+				background-image: url(img/icon2.png);
+				width: 9%;
+				height: 30%;
+				top: 35%;
+				right: 25%;
+			}
+			.game3-2 button {
+				position: absolute;
+				right: 5%;
+				top: 35%;
+				background-color: #ffffff;
+				color: #55aaff;
+				border: 2px solid #55aaff;
+				border-radius: 6px;
+				outline: none;
+				padding: 14px 50px;
+				text-align: center;
+				font-weight: 700;
+				font-size: 16px;
+				cursor: pointer;
+			}
+			.game3-2 button:hover {
+				background-color: #55aaff;
+				color: #ffffff;
+				box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+			}
+			.game3-2 button:active {
+				transform: translateY(4px);
+			}
+			.game3-2:hover {
+				border: none;
+				background-color: #ffffff;
+				color: #565656;
+				box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+			}
+			/* 分割线-分割线-分割线-分割线-分割线-分割线-分割线-分割线-分割线-分割线-分割线 */
+			/* -分割线-分割线-分割线-分割线-分割线-分割线-分割线-分割线-分割线-分割线-分割线 */
+			.game3-3 {
+				position: relative;
+				width: 95%;
+				height: 150px;
+				border: solid 1px #e7e7e7;
+				border-radius: 12px;
+				margin-top: 3%;
+			}
+			.game3-img3 {
+				position: absolute;
+				left: 0%;
+				width: 25%;
+				height: 100%;
+				border-radius: 12px 0 0px 12px;
+			}
+			.game3-word3 {
+				position: absolute;
+				top: 45%;
+				left: 30%;
+				font-size: 20px;
+			}
+			.game3-icon3 {
+				position: absolute;
+				background-image: url(img/icon1.png);
+				width: 9%;
+				height: 30%;
+				top: 35%;
+				right: 25%;
+			}
+			.game3-3 button {
+				position: absolute;
+				right: 5%;
+				top: 35%;
+				background-color: #ffffff;
+				color: #55aaff;
+				border: 2px solid #55aaff;
+				border-radius: 6px;
+				outline: none;
+				padding: 14px 50px;
+				text-align: center;
+				font-weight: 700;
+				font-size: 16px;
+				cursor: pointer;
+			}
+			.game3-3 button:hover {
+				background-color: #55aaff;
+				color: #ffffff;
+				box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+			}
+			.game3-3 button:active {
+				transform: translateY(4px);
+			}
+			.game3-3:hover {
+				border: none;
+				background-color: #ffffff;
+				color: #565656;
+				box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+			}
+			/* 分割线-分割线-分割线-分割线-分割线-分割线-分割线-分割线-分割线-分割线-分割线 */
+			/* -分割线-分割线-分割线-分割线-分割线-分割线-分割线-分割线-分割线-分割线-分割线 */
+			.game3-4 {
+				position: relative;
+				width: 95%;
+				height: 150px;
+				border: solid 1px #e7e7e7;
+				border-radius: 12px;
+				margin-top: 3%;
+			}
+			.game3-img4 {
+				position: absolute;
+				left: 0%;
+				width: 25%;
+				height: 100%;
+				border-radius: 12px 0 0px 12px;
+			}
+			.game3-word4 {
+				position: absolute;
+				top: 45%;
+				left: 30%;
+				font-size: 20px;
+			}
+			.game3-icon4 {
+				position: absolute;
+				background-image: url(img/icon2.png);
+				width: 9%;
+				height: 30%;
+				top: 35%;
+				right: 25%;
+			}
+			.game3-4 button {
+				position: absolute;
+				right: 5%;
+				top: 35%;
+				background-color: #ffffff;
+				color: #55aaff;
+				border: 2px solid #55aaff;
+				border-radius: 6px;
+				outline: none;
+				padding: 14px 50px;
+				text-align: center;
+				font-weight: 700;
+				font-size: 16px;
+				cursor: pointer;
+			}
+			.game3-4 button:hover {
+				background-color: #55aaff;
+				color: #ffffff;
+				box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+			}
+			.game3-4 button:active {
+				transform: translateY(4px);
+			}
+			.game3-4:hover {
+				border: none;
+				background-color: #ffffff;
+				color: #565656;
+				box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+			}
+			/* 分割线-分割线-分割线-分割线-分割线-分割线-分割线-分割线-分割线-分割线-分割线 */
+			/* -分割线-分割线-分割线-分割线-分割线-分割线-分割线-分割线-分割线-分割线-分割线 */
+			.game3-5 {
+				position: relative;
+				width: 95%;
+				height: 150px;
+				border: solid 1px #e7e7e7;
+				border-radius: 12px;
+				margin-top: 3%;
+			}
+			.game3-img5 {
+				position: absolute;
+				left: 0%;
+				width: 25%;
+				height: 100%;
+				border-radius: 12px 0 0px 12px;
+			}
+			.game3-word5 {
+				position: absolute;
+				top: 45%;
+				left: 30%;
+				font-size: 20px;
+			}
+			.game3-icon5 {
+				position: absolute;
+				background-image: url(img/icon2.png);
+				width: 9%;
+				height: 30%;
+				top: 35%;
+				right: 25%;
+			}
+			.game3-5 button {
+				position: absolute;
+				right: 5%;
+				top: 35%;
+				background-color: #ffffff;
+				color: #55aaff;
+				border: 2px solid #55aaff;
+				border-radius: 6px;
+				outline: none;
+				padding: 14px 50px;
+				text-align: center;
+				font-weight: 700;
+				font-size: 16px;
+				cursor: pointer;
+			}
+			.game3-5 button:hover {
+				background-color: #55aaff;
+				color: #ffffff;
+				box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+			}
+			.game3-5 button:active {
+				transform: translateY(4px);
+			}
+			.game3-5:hover {
+				border: none;
+				background-color: #ffffff;
+				color: #565656;
+				box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+			}
+			/* 分割线-分割线-分割线-分割线-分割线-分割线-分割线-分割线-分割线-分割线-分割线 */
+			/* -分割线-分割线-分割线-分割线-分割线-分割线-分割线-分割线-分割线-分割线-分割线 */
+			.gif {
+				position: relative;
+				width: 100%;
+				height: 30%;
+				margin-top: 50px;
+				/* border: solid 1px black; */
+			}
+			.gif1 {
+				position: absolute;
+				/* float: left; */
+				top: 0%;
+				left: 15%;
+				/* border-radius: 8px; */
+			}
+			.gif2 {
+				position: absolute;
+				/* float: left; */
+				top: 50%;
+				/* bottom: 100%; */
+				left: 15%;
+				border-radius: 8px;
+			}
+			.gif3 {
+				position: absolute;
+				/* float: right; */
+				border-radius: 8px;
+				right: 15%;
+			}
+			.footer {
+				position: relative;
+				float: left;
+				margin: auto;
+				width: 100%;
+				height: 150px;
+				background-color: #e1e1e1;
+			}
+			.btmworld li {
+				float: left;
+				list-style-type: none;
+				line-height: 60px;
+				padding-left: 55px;
+				position: relative;
+				left: 13%;
+				margin-top: 20px;
+			}
+			/* .btmworld li a {
+				text-decoration: none;
+				color: #000000;
+			}
+			.btmworld li a:hover {
+				color: #55aaff;
+			} */
+		</style>
+	</head>
+	<body>
+		<center>
+		<div class="top">
+			<img src="./img/logo.png" class="logo" >
+			<div class="search">
+				<input type="text" class="search-input" placeholder="搜索游戏或商品" />
+				<span class="searh-icon"></span>
+				<img src="img/loginicon.png" class="login-icon">
+				<img src="img/cart.png" class="cart" >
+			</div>
+		</div>
+			<div class="tittle">
+				<ul>
+					<li><a href="#">ITUNES</a></li>
+					<li><a href="#">Google Play</a></li>
+					<li><a href="#">STEAM</a></li>
+					<li><a href="#">游戏充值卡</a></li>
+					<li><a href="#">游戏激活码</a></li>
+					<li><a href="#">手游充值</a></li>
+				</ul>
+			</div>
+		</center>
+			<center>
+			<div class="content">
+				<div class="game">
+					<img src="img/1p.jpg" >
+					<a href="#"><img src="img/1p/freefire.jpg" ></a>
+					<a href="#"><img src="img/1p/fortnite.jpg" ></a>
+					<a href="#"><img src="img/1p/judgedestiny.jpg" ></a>
+					<a href="#"><img src="img/1p/mobilelegend.jpg" ></a>
+					<a href="#"><img src="img/1p/pubg.jpg" ></a>
+					<br><br>
+					<hr style="width:85%; color: #eeeeee;">
+					<br>
+					<img src="img/1c.jpg" >
+					<a href="#"><img src="img/1c/dnsea.jpg" ></a>
+					<a href="#"><img src="img/1c/mohun.jpg" ></a>
+					<a href="#"><img src="img/1c/mosiang.jpg" ></a>
+					<a href="#"><img src="img/1c/steam.jpg" ></a>
+					<a href="#"><img src="img/1c/valorant.jpg" ></a>
+					<br><br>
+					<hr style="width:85%; color: #eeeeee;">
+					<br>
+				</div>
+				<div class="game2">
+					<p><span class="newgameword">新上架游戏</span></p><br>
+					<a href="#"><img src="img/1new/478.jpg" ></a>
+					<a href="#"><img src="img/1new/479.jpg" ></a>
+					<a href="#"><img src="img/1new/480.jpg" ></a>
+					<a href="#"><img src="img/1new/481.jpg" ></a>
+					<a href="#"><img src="img/1new/482.jpg" ></a>
+					<a href="#"><img src="img/1new/483.jpg" ></a>
+					<br><br><br>
+					<!-- <hr style="width:95%; color: #eeeeee;"> -->
+					<br><br>
+				</div>
+				<p><span class="game3-tittle">热销的商品</span></p>
+				<div class="game3">
+					<div class="game3-1">
+						<img src="img/game3/1.jpg" class="game3-img1">
+						<span class="game3-word1">Cyberpunk 2077 GOG CD KEY</span>
+						<span class="game3-icon1"></span>
+						<button type="button" style="width: 18%;">MYR183</button>
+					</div>
+					<div class="game3-2">
+						<img src="img/game3/2.jpg" class="game3-img2">
+						<span class="game3-word2">Monster Hunter: World EU CD KEY</span>
+						<span class="game3-icon2"></span>
+						<button type="button" style="width: 18%;">MYR124</button>
+					</div>
+					<div class="game3-3">
+						<img src="img/game3/3.jpg" class="game3-img3">
+						<span class="game3-word3">Horizon Zero Dawn CD KEY</span>
+						<span class="game3-icon3"></span>
+						<button type="button" style="width: 18%;">MYR106</button>
+					</div>
+					<div class="game3-4">
+						<img src="img/game3/4.jpg" class="game3-img4">
+						<span class="game3-word4">Grand theft Auto VI - CD KEY</span>
+						<span class="game3-icon4"></span>
+						<button type="button" style="width: 18%;">MYR286</button>
+					</div>
+					<div class="game3-5">
+						<img src="img/game3/5.jpg" class="game3-img5">
+						<span class="game3-word5">Battlefield 3 Origin CD KEY</span>
+						<span class="game3-icon5"></span>
+						<button type="button" style="width: 18%;">MYR166</button>
+					</div>
+					<div class="gif">
+						<a href="#"><img src="img/gif1.gif" class="gif1"></a>
+						<a href="#"><img src="img/gif2.gif" class="gif2"></a>
+						<a href="#"><img src="img/gif3.jpg" class="gif3"></a>
+					</div>
+				</div>
+			</div>
+			</center>
+			<div class="footer">
+				<div class="btmworld">
+					<ul>
+						<a href="#"><li>24x7 全天客服服务</li></a>
+						<a href="#"><li>用最划算的价格购买</li></a>
+						<a href="#"><li>安全可靠</li></a>
+						<a href="#"><li>支付方式</li></a>
+					</ul>
+				</div>
+			</div>
+	</body>
+</html>
